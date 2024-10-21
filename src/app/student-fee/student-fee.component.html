@@ -1,0 +1,103 @@
+<form [formGroup]="studentform">
+
+    <label for="">Name:</label>
+    <input type="text" formControlName="name">
+    <div *ngIf="studentform.get('name')?.touched && studentform.get('name')?.invalid">
+        <p class="error" *ngIf="studentform.get('name')?.errors?.['required']">Name is required</p>
+        <p class="error" *ngIf="studentform.get('name')?.errors?.['minlength']">Minimum 3 chars</p>
+        <p class="error" *ngIf="studentform.get('name')?.errors?.['maxlength']">Maximum 10 chars</p>
+    </div>
+    
+
+    <label for="">Class:</label>
+    <input type="text" formControlName="class">
+
+    <label for="">Father Name:</label>
+    <input type="text" formControlName="fathername">
+
+    <label for="">Email:</label>
+    <input type="text" formControlName="email">
+
+    <label for="">DOB:</label>
+    <input type="text" formControlName="dob">
+
+    <label for="">Address</label>
+    <div formGroupName="address">
+        <label for="">Address Line:</label>
+        <input type="text" formControlName="addressline">
+
+        <label for="">City:</label>
+        <input type="text" formControlName="city">
+
+        <label for="">State:</label>
+        <input type="text" formControlName="state">
+
+        <label for="">PIN Code:</label>
+        <input type="text" formControlName="pincode">
+    
+    </div>
+
+    <label for="">Company:</label>
+    <div formGroupName="company">
+        <label for="">name:</label>
+        <input type="text" formControlName="companyname">
+
+        <label for="">package:</label>
+        <input type="text" formControlName="package">
+    </div>
+
+    <br><br>
+
+    <label for="">Cards</label>
+    <button (click)="addmarks()">Add Marks</button>
+    <br><br><br>
+
+
+    <div formArrayName="marks">
+        <div *ngFor="let mark of marksFormArray.controls; let i=index">
+            <div formGroupName="{{i}}">
+
+                <h2>{{i+1}}</h2>
+
+                <label for="">Class:</label>
+                <input type="text" formControlName="class">
+
+                <label for="">Year:</label>
+                <input type="text" formControlName="year">
+
+                <label for="">Percentage:</label>
+                <input type="text" formControlName="Percentage">
+
+                `<button (click)="delete(i)">Delete</button>
+
+            
+
+            </div>
+        </div>
+    </div>
+    <br><br>
+
+    <label for="">Type</label>
+
+    <label for="">Day Scholor:</label>
+    <input type="radio" name="type" formControlName="type" value="dayscholor">
+
+    <label for="">Hostel:</label>
+    <input type="radio" name="type" formControlName="type" value="residential">
+
+    <div *ngIf="studentform.get('type')?.value=='dayscholor'">
+        <label for="">Bus fee:</label>
+        <input type="text" formControlName="busfee"> 
+    </div>
+    
+
+    <div *ngIf="studentform.get('type')?.value=='residential'">
+        <label for="">Hostel fee:</label>
+        <input type="text" formControlName="hostelFee">    
+    </div>
+
+
+    <button (click)="submit()">Submit</button>
+
+
+</form>

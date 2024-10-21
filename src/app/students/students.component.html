@@ -1,0 +1,103 @@
+<div class="full">
+<div class="top">
+    <div class="left">
+        <form>
+            <label>
+                <img src="" alt="">
+            </label>
+            <br>
+
+            <label for=""> Student Name</label>
+            <input type="text">
+            <br>
+
+            <label for="">Phone Number</label>
+            <input type="text">
+            <br>
+
+            <label for="">City</label>
+            <input type="text">
+            <br>
+
+            <label for="">Date of Birth</label>
+            <input type="text">
+            <br>
+
+            <label for="">Email</label>
+            <input type="text">
+            <br>
+
+            <label for="">School Name</label>
+            <input type="text">
+            <br>
+
+            <label for="">School City</label>
+            <input type="text">        
+
+            <button>Submit</button>
+        </form>
+
+    </div>
+    <div class="right">
+        <label>Search:</label>
+        <input type="text">
+        <br>
+
+        <label>Column</label>
+        <br>
+        <select [(ngModel)]="column">
+            <option>name</option>
+            <option>phone</option>
+            <option>city</option>
+        </select>
+        <br>
+
+        <label for="">Order</label>
+        <br>
+        <select [(ngModel)]="order">
+            <option value="asc">Asc</option>
+            <option value="desc">desc</option>
+        </select>
+        <br>
+        <button (click)="sort()">Sort</button>
+        <br>
+
+        <label for="">Page:</label>
+        <br>
+        <select>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+        </select>
+        <br>
+        <button>Show</button>
+
+    </div>
+</div>
+<div class="bottom">
+    <div >
+        <form class="form1"  *ngFor="let student of students">
+        <img src="{{student.profile_picture}}" height="60px" width="60px">
+        <label>Name:{{student.name}}</label>
+        <br>
+        <label>phone:{{student.phone}}</label>
+        <br>
+        <label>DOB:{{student.dob}}</label>
+        <br>
+        <label>School:{{student.school_name}}</label>
+        <br>
+        <label>School City:{{student.school_city}}</label>
+        
+        <div class="buttonclass">
+        <button class="button1">View</button>
+        <button class="button1">Edit</button>
+        <button class="button1">Delete</button>
+    </div>
+
+    </form>
+    </div>
+</div>
+
+</div>

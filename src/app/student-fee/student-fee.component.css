@@ -1,0 +1,56 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff; /* Light background for contrast */
+}
+
+form {
+    background-color: #e0f7fa; /* Light sky blue background */
+    border: 1px solid #81d4fa; /* Border color */
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 600px;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+    color: #00796b; /* Darker text for labels */
+}
+
+input {
+    width: calc(100% - 12px); /* Full width minus padding */
+    padding: 8px;
+    border: 1px solid #4dd0e1; /* Input border color */
+    border-radius: 4px;
+    margin-bottom: 15px;
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    border-color: #00bcd4; /* Focus color */
+    outline: none;
+}
+
+h2 {
+    color: #00796b; /* Darker color for section headings */
+}
+
+button {
+    background-color: #00bcd4; /* Button background */
+    color: white; /* Button text color */
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0097a7; /* Darker shade on hover */
+}
+
+div {
+    margin-bottom: 20px; /* Space between sections */
+}

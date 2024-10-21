@@ -1,0 +1,51 @@
+<input type="text" placeholder="Search by Account" [(ngModel)]="term" (keyup)="search()">
+<label for="">column:</label>
+    <select [(ngModel)]="column">
+        <option>account_name</option>
+        <option>account_number</option>
+        <option>city</option>
+    </select>
+
+<label for="">order:</label>
+    <select [(ngModel)]="order">
+        <option value="asc">Ascending</option>
+        <option value="desc">Descending</option>
+    </select>
+<button (click)="change()">Submit</button>
+
+<label for="">Page</label>
+    <select [(ngModel)]="page" (change)="pagination()">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+    </select>
+
+        
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>Account Name</th>
+            <th>Available Balance</th>
+            <th>Account Number</th>
+            <th>City</th>
+            <th>Profile Picture</th>
+            <th>ID</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let bankaccount of bankaccounts">
+            <td>{{bankaccount.account_name}}</td>
+            <td>{{bankaccount.availablebalance}}</td>
+            <td>{{bankaccount.account_number}}</td>
+            <td>{{bankaccount.city}}</td>
+            <td>
+                <img src="{{bankaccount.profilepicture}}" height="100px" width="100px">
+            </td>
+            <td>{{bankaccount.id}}</td>
+
+        </tr>
+    </tbody>
+</table>

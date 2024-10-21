@@ -1,0 +1,28 @@
+<h1>Bank Accounts form</h1>
+
+<form action="" [formGroup]="bankaccountform">
+    <label for="">Account Name</label>
+    <input type="text" formControlName="account_name">
+    <br>
+
+    <label for="">Available balance</label>
+    <input type="text" formControlName="available_balance">
+    <br>
+
+    <label for="">Account number</label>
+    <input type="text" formControlName="account_number">
+    <br>
+
+    <label for="">City</label>
+    <input type="text" formControlName="city">
+    <br>
+
+    <label for="">Profile Picture</label>
+    <input type="text" formControlName="profie_picture">
+    <br>
+
+    <button (click)="submit()">Submit</button>
+
+
+
+</form>

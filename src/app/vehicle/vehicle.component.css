@@ -1,0 +1,30 @@
+body {
+    background-color: #f0f8ff; /* Light background for the whole page */
+    color: #333; /* Dark text color */
+    font-family: Arial, sans-serif; /* Font style */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0; /* Add some spacing */
+}
+
+th, td {
+    padding: 12px; /* Add some padding for better readability */
+    text-align: left; /* Align text to the left */
+    border-bottom: 1px solid #007bb5; /* Blue border color */
+}
+
+th {
+    background-color: #007bb5; /* Blue background for the header */
+    color: #ffffff; /* White text color for the header */
+}
+
+tbody tr:nth-child(even) {
+    background-color: #e6f7ff; /* Light blue background for even rows */
+}
+
+tbody tr:hover {
+    background-color: #99c2ff; /* Highlight row on hover */
+}

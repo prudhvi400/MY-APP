@@ -1,0 +1,41 @@
+
+        body {
+            background-color: #121212; /* Dark background */
+            color: #ffffff; /* Light text color */
+            font-family: Arial, sans-serif; /* Font style */
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #ffcc00; /* A contrasting color for the title */
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border: 1px solid #444; /* Slightly lighter border for visibility */
+        }
+
+        th {
+            background-color: #1e1e1e; /* Darker header */
+            color: #ffffff; /* Light text for headers */
+        }
+
+        tr:nth-child(even) {
+            background-color: #2a2a2a; /* Alternating row colors */
+        }
+
+        tr:hover {
+            background-color: #3a3a3a; /* Highlight on hover */
+        }
+
+

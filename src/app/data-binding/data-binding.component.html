@@ -1,0 +1,16 @@
+<p>data-binding works!</p>
+
+<!-- interpolation -->
+ <h1>My age is {{age}}</h1>
+ <h1>My age is {{name}}</h1>
+
+ <!-- PROPERTY BINDING -->
+   <button [disabled]="isInvalid">Create</button>
+
+ <!-- event binding -->
+  <button (click)="submit()">Submit</button>
+  <input type="text" (keyup)="typing()">
+  <input type="text" (keydown)="typing1()">
+
+  <!-- two way data binding -->
+   <input type="text" [(ngModel)]="phone">

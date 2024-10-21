@@ -1,0 +1,60 @@
+<button (click)="pricelh()">Price Low to High</button>
+<button (click)="pricehl()">Price High to Low</button>
+<button (click)="ratinglh()">Rating Low to High</button>
+<button (click)="ratinghl()">Rating High to Low</button>
+<button (click)="delivery()">Delivery in week</button>
+<br>
+<button (click)="applydiscount()">Apply 50% discount</button>
+<button (click)="applydeliverycharges()">Price with delivery charges</button>
+<br>
+<button (click)="totalprice()">Total price</button>
+<button>Total cart items: {{products.length}}</button>
+
+<input type="text" placeholder="Search by product name" [(ngModel)]="productname" (keyup)="search1()">
+<!-- <input type="number" placeholder="Search" [(ngModel)]="productprice" (keyup)="search2()"> -->
+
+<br>
+
+<label for="">Product Name:</label>
+<input type="text" [(ngModel)]="name">
+<label for="">Price:</label>
+<input type="number" [(ngModel)]="price"><br>
+<label for="">Rating:</label>
+<input type="number" [(ngModel)]="rating">
+<label for="">Delivery Date</label>
+<input type="date" [(ngModel)]="deliverydate"><br>
+<label for="">Free Delivery</label>
+<label for="">Yes</label>
+<input type="radio" name="fd" value="true" [(ngModel)]="freedelivery">
+<label for="">No</label>
+<input type="radio" name="fd" value="false" [(ngModel)]="freedelivery">
+<br>
+<button (click)="submit()">Submit</button>
+
+<h1>Products List</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>S.No</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Rating</th>
+            <th>Delivery Date</th>
+            <th>Free Delivery</th>
+        </tr>
+    </thead>  
+    <tbody>
+        <tr *ngFor="let product of products let i=index">
+            <td>{{i+1}}</td>
+            <td>{{product.name}}</td>
+            <td>{{product.price}}</td>
+            <td>{{product.rating}}</td>
+            <td>{{product.deliverydate}}</td>
+            <td>{{product.freedelivery}}</td>
+            <td>
+                <button (click)="delete(i)">Delete</button>
+            </td>
+        </tr>
+    </tbody>  
+</table>

@@ -1,0 +1,64 @@
+body {
+    background-color: #121212; /* Dark background for the entire page */
+    color: #ffffff; /* Light text color */
+    font-family: Arial, sans-serif; /* Font style */
+}
+
+h1 {
+    color: black; /* White color for headings */
+    margin-bottom: 10px; /* Space below headings */
+}
+
+ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+}
+
+li {
+    color: black; /* White text for list items */
+    margin: 5px 0; /* Space between list items */
+}
+
+table {
+    width: 100%; /* Full width for tables */
+    border-collapse: collapse; /* Collapse borders */
+    margin-bottom: 20px; /* Space between tables */
+    background-color: #1e1e1e; /* Table background */
+}
+
+thead {
+    background-color: #333333; /* Dark header background */
+}
+
+th, td {
+    padding: 10px; /* Padding for cells */
+    text-align: left; /* Align text to the left */
+}
+
+th {
+    border-bottom: 2px solid #444; /* Bottom border for header */
+    color: #ffffff; /* White text for header cells */
+}
+
+tbody tr {
+    background-color: #2a2a2a; /* Dark row background */
+}
+
+tbody tr:nth-child(even) {
+    background-color: #3a3a3a; /* Slightly lighter for even rows */
+}
+
+tbody tr:hover {
+    background-color: #444; /* Highlight row on hover */
+    cursor: pointer; /* Change cursor on hover */
+}
+
+
+.green{
+    background-color: green;
+    color: orange;
+}
+.red{
+    background-color: red;
+    color: white;
+}

@@ -8,6 +8,10 @@ form {
     background-color: #f9f9f9;
 }
 
+h1{
+    color: skyblue;
+}
+
 label {
     display: block;
     margin-bottom: 5px;
